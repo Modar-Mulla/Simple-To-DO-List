@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f6f6f6;
+}
+.task-input {
+  width: 100%;
+  height: 100px;
+  background-color: #2ba0df;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+.task-input input {
+  padding: 20px;
+  width: calc(100% - 30px);
+  background-color: #85c9ed;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+}
+.task-input .add-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2ba0df;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.task-input .add-btn:hover {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+.tasks-con {
+  padding: 15px;
+}
+.tasks-con > div {
+  width: 100%;
+  height: 60px;
+  padding: 15px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.tasks-con > div:not(:last-child) {
+  margin-bottom: 10px;
+}
+.tasks-con .no-tasks {
+  color: #777;
+}
+.tasks-con .task-box {
+  justify-content: space-between;
+  position: relative;
+}
+.task-box .delete-btn {
+  background-color: #e91e63;
+  color: white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  float: right;
+}
+.tasks-con .task-box.task-completed {
+  text-decoration: line-through;
+}
+.stats {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding-top: 10px;
+}
+
+.slide-fade {
+  animation: slide-fade 0.5s ease-out forwards;
+  -webkit-animation: slide-fade 0.5s ease-out forwards;
+}
+@keyframes slide-fade {
+  0% {
+    left: 0px;
+  }
+  100% {
+    opacity: 0;
+    left: 200px;
+  }
+}
